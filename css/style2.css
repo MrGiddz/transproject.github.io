@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+ }
+.header{
+    position: fixed;
+    background: #22242A;
+    padding: 20px;
+    height: 30px;
+    width: 100%;
+    display: flex;
+}
+.left_area{
+    color: #fff;
+    margin: 0;
+    left: 0;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-weight: 900;
+    flex: 10 5 25%;
+}
+.left_area h3{
+    margin-left: 20px;
+}
+.left_area span{
+    color: #1DC4E7;
+}
+.right_area{
+    flex: 1 4 5%;
+    align-self: center;
+    
+}
+.btn{
+    padding: 5px;
+    background: #01C853;
+    text-decoration: none;
+    margin-left: 10px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.logout_btn{
+    padding: 5px;
+    background: #19B3D3;
+    text-decoration: none;
+    margin-top: -20px;
+    right: 10px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+.logout_btn:hover{
+    background: #0D9DBB;
+}
+.sidebar{
+    background: #2F323A;
+    margin-top: 70px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    transition: all .3s ease-in-out;
+
+}
+.sidebar h4{
+    color: #ccc;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+.sidebar a{
+    color: #fff;
+    display: block;
+    width: 70%;
+    line-height: 45px;
+    text-decoration: none;
+    padding-left: 20px;
+    box-sizing: border-box;
+    transition: all .3s ease;
+}
+.sidebar a:hover{
+    background: #19B3D3;
+}
+.sidebar i{
+    padding-right: 10px;
+}
+#check{
+    display: none;
+}
+label #cancel{
+    display: none;
+}
+label #btn{
+    z-index: 1;
+    left: 10px;
+    position: fixed;
+    cursor: pointer;
+    font-size: 20px;
+    color: #fff; 
+    margin: 0px 0;
+    transition: all .5s;
+}
+label #btn:hover{
+    color: #19B3D3;
+}
+label #cancel{
+    z-index: 999;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #fff;
+    padding: 4px 9px;
+    transition: all .5s;
+}
+#check:checked ~ .sidebar{
+    left: 0px;
+}
+#check:checked ~ .sidebar a span{
+    display: none;
+}
+#check:checked ~ .sidebar a{
+    font-size: 20px;
+    margin-left: 190px;
+    width: 80px;
+}
+#check:checked ~ .main_content{
+    margin-left: 190px;
+}
+.main_content{
+    margin-top: 70px;
+    width: 99%;
+    display: flex;
+    flex-direction: column;
+    transition: all .3s ease-in-out;
+}
+.details{
+    height: auto;
+    flex-grow: 1;
+    background-color: #E7E4DA;
+    border: 1px solid #E7E4DA;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    margin-left: 70px;
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+.heading{
+    margin-top: 10px;
+    width: 85%;
+    background-color: #01C853 ;
+    margin-left: 10px;
+    right: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    color: seashell;
+}
+.heading_2{
+    margin-top: 10px;
+    width: 85%;
+    background-color: rgba(1, 200, 84, 0.575) ;
+    margin-left: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: seashell;
+}
+.heading_3{
+    display: flex;
+    margin-top: 10px;
+    width: 60%;
+    background-color: #ff9700 ;
+    margin-left: 10px;
+    right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    color: seashell;
+}
+.mt-5{
+    margin-top: 10px;
+}
+.content{
+    margin-top: 5px;
+    width: 90%;
+    margin-left: 10px;
+    padding: 30px;
+}
+.heading h3{
+    font-size: 1.05rem;
+}
+.heading_2 h5{
+    font-size: .9rem;
+}
+footer{
+    flex: 2;
+    background: #22242A;
+    padding: 20px;
+    height: 30px;
+}
+
+/*
+ * Author: http://stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/
+ */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+    .header{
+        flex: 10  5 20%;
+   }
+    .right_area{
+        flex: 1 2 30%;
+    }
+    .sidebar{
+        left: -190px;
+        overflow: scroll;
+
+    }
+    .sidebar a span{
+        display: none;
+    }
+    .sidebar a{
+        font-size: 20px;
+        margin-left: 190px;
+        width: 80px;
+    }
+    #check:checked ~ .sidebar{
+      left: 0px;
+    }
+    #check:checked ~ .sidebar a span{
+        display: inline;
+    }
+    #check:checked ~ .sidebar a{
+        width: 100%;
+        margin-left: 4px;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+    .header{
+        flex: 10  5 22%;
+   }
+    .right_area{
+        flex: 1 2 22%;
+    }
+    .sidebar{
+        left: -190px;
+    }
+    .sidebar a span{
+        display: none;
+    }
+    .sidebar a{
+        font-size: 20px;
+        margin-left: 190px;
+        width: 80px;
+    }
+    #check:checked ~ .sidebar{
+      left: 0px;
+    }
+    #check:checked ~ .sidebar a span{
+        display: inline;
+    }
+    #check:checked ~ .sidebar a{
+        width: 100%;
+        margin-left: 4px;
+    }
+}
+
+@media only screen 
+and (min-width : 540px) 
+and (max-device-width : 1024px){
+    .header{
+        flex: 10  5 20%;
+   }
+    .right_area{
+        flex: 1 2 10%;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+    .header{
+        flex: 10  5 20%;
+   }
+    .right_area{
+        flex: 1 2 35%;
+    }
+    .sidebar{
+        left: -190px;
+    }
+    .sidebar a span{
+        display: none;
+    }
+    .sidebar a{
+        margin-left: 190px;
+        width: 80px;
+    }
+    #check:checked ~ .sidebar{
+        left: 0px;
+      }
+    #check:checked ~ .sidebar a span{
+        display: inline;
+    }
+    #check:checked ~ .sidebar a{
+        width: 100%;
+        margin-left: 100px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+ 
+    .header{
+        flex: 10  5 20%;
+   }
+    .right_area{
+        flex: 1 2 5%;
+    }
+    .sidebar a{
+        width: 100%;
+        margin-left: 10px;
+
+    }
+    .sidebar a span{
+        display: inline;
+    }
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  
+    .sidebar{
+        left: -190px;
+    }
+    .sidebar a span{
+        display: none;
+    }
+    .sidebar a{
+        font-size: 20px;
+        margin-left: 190px;
+        width: 80px;
+    }
+    #check:checked ~ .sidebar{
+      left: 0px;
+    }
+    #check:checked ~ .sidebar a span{
+        display: inline;
+    }
+    #check:checked ~ .sidebar a{
+        width: 100%;
+        margin-left: 4px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+  
+    .header{
+        flex: 10  5 20%;
+   }
+    .right_area{
+        flex: 1 3%;
+    }
+    .sidebar{
+        left: -190px;
+    }
+    .sidebar a{
+        margin-left: 190px;
+        width: 60px;
+    }
+    .sidebar a span{
+        display: none;
+    }
+    
+    #check:checked ~ .sidebar{
+        left: 0px;
+    }
+    #check:checked ~ .sidebar a span{
+        display: inline;
+    }
+    #check:checked ~ .sidebar a{
+        width: 100%;
+        margin-left: -10px;
+    }
+    
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+   
+   
+    .sidebar{
+        left: 0;
+    }
+    .sidebar a{
+        width: 100%;
+        margin-left: 10px;
+
+    }
+    .sidebar a span{
+        display: inline;
+    }
+    #check:checked ~ .sidebar{
+        left: 0px;
+    }
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+    .header{
+        flex: 2 5 20%;
+   }
+    .sidebar{
+        left: -190px;
+    }
+    .sidebar a span{
+        display: none;
+    }
+    .sidebar a{
+        font-size: 20px;
+        margin-left: 190px;
+        width: 80px;
+    }
+    #check:checked ~ .sidebar{
+      left: 0px;
+    }
+    #check:checked ~ .sidebar a span{
+        display: inline;
+    }
+    #check:checked ~ .sidebar a{
+        width: 100%;
+        margin-left: 4px;
+    }
+}
+
+@media only screen 
+and (min-device-width : 1024px) 
+and (max-device-width : 1224px) {
+    .header{
+        flex: 10  5 20%;
+   }
+    .right_area{
+        flex: 1 3%;
+    }
+}

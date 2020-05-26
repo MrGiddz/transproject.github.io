@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    position: fixed;
+    background: #E7E7DA;
+    padding: 20px;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+.left_area h3{
+    color: rgb(87, 87, 87);
+    margin-left: 80px;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 600;
+    justify-self: flex-start;
+}
+.left_area span{
+    text-transform: uppercase;
+    color: rgb(116, 116, 116);
+    font-size: 1.5em;
+    font-weight: 900;
+}
+.right_area{
+   
+}
+.logout_btn{
+    padding: 5px;
+    background: #01C853;
+    text-decoration: none;
+}
+.sidebar {
+    z-index: 111;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #908E88;
+    transition: all .5s ease;
+}
+.sidebar header{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+    line-height: 70px;
+    background: #CAC8BF;
+    color: #3A3937;
+    font-weight: 600;
+    user-select: none;
+}
+.sidebar ul a{
+    display: block;
+    height: 70%;
+    width: 100%;
+    line-height: 50px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid black;
+    transition: all .5s ease-in-out;
+}
+ul li:hover a{
+    padding-left: 50px;
+}
+.sidebar ul a i{
+    margin-right: 10px;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+    background: #575552;
+    border-radius: 3px;
+}
+label #btn{
+    left: 40px;
+    top: 25px;
+    font-size: 35px;
+    color: white; 
+    padding: 2px 5px; 
+    transition: all .5s;
+}
+label #cancel{
+    z-index: 999;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #908E88;
+    padding: 4px 9px;
+    transition: all .5s;
+}
+ 
+#check:checked ~ .sidebar{
+    left: 0;
+}
+
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+    pointer-events: none;
+}
+#check:checked ~ h3{
+    left: 340px;
+}
+#check:checked ~ label #cancel{
+    left: 195px;
+}
+
+#check:checked ~ section{
+    margin-left: 250px;
+}
+section{
+    background-image: url("../Images/topography.svg"),
+    linear-gradient(90deg, #f3f3f3, #b2b1b6);
+    background-position: center;
+    background-size: auto;
+    height: 100vh;
+    transition: all .5s ease;
+}

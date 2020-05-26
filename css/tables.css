@@ -1,0 +1,122 @@
+.overflow{
+    overflow-x: auto;
+}
+.content-table{
+    border-collapse: collapse;
+    height: auto;
+    border-spacing: 0;
+    width: 90%;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .15);
+}
+
+.content-table thead tr{
+    background-color: var(--tableheadrow);
+    display: table-row;
+    color: rgb(46, 46, 46);
+    text-align: center;
+    font-weight: 800;
+}
+.content-table thead .header{
+    background-color: var(--darkmatter);
+    color: white;
+}
+.content-table th,
+.content-table td{
+    padding: 10px 10px;
+
+}
+.content-table tbody tr{
+    transition: all 0.2s linear;
+    border-bottom: 1px solid lightgray;
+}
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type{
+    border-bottom: 1px solid var(--tableheadrow);
+}
+.content-table tbody tr:hover{
+    background-color: #ffffff;
+}
+
+
+
+
+/* Recordings table */
+.recordings-table { 
+    width: 90%; 
+    border-collapse: collapse; 
+    text-align: center;
+  }
+  .recordings-table tbody tr td{
+    transition: background-color 0.2s linear;
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+    padding: 15px 20px 15px 20px;
+  }
+  .recordings-table tbody th{
+    background-color: var(--tableheadrow);
+    border-bottom: 2px solid var(--greyapple);
+    color: rgb(46, 46, 46);
+    text-align: center;
+    font-weight: 900;
+}
+  .recordings-table tbody tr:hover{
+    background-color: #ffffff;
+}
+  /* Zebra striping */
+  .recordings-table tr:nth-of-type(odd) { 
+    background: #eee; 
+  }
+  .recordings-table thead th { 
+    background:  var(--darkmatter); 
+    color: #2F323A; 
+    text-align: center;
+    font-weight: bold; 
+  }
+  .recordings-table td, .recordings-table th { 
+    padding: 6px; 
+    border: 0; 
+    text-align: left; 
+  }
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+      /* Force table to not be like tables anymore */
+      .recordings-table table,.recordings-table thead,
+      .recordings-table tbody,.recordings-table th,.recordings-table td,.recordings-table tr { 
+          display: block; 
+      }
+      
+      /* Hide table headers (but not display: none;, for accessibility) */
+      .recordings-table thead tr { 
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+      }
+      
+      .recordings-table  tr { border: 1px solid #ccc; }
+      
+      .recordings-table  td { 
+          /* Behave  like a "row" */
+          border: none;
+          border-bottom: 1px solid #eee; 
+          position: relative;
+          padding-left: 50%; 
+      }
+      
+      .recordings-table td:before { 
+          /* Now like a table header */
+          position: absolute;
+          content: attr(data-label);
+          /* Top/left values mimic padding */
+          top: 6px;
+          left: 6px;
+          width: 45%; 
+          padding-right: 10px; 
+          white-space: nowrap;
+      }
+    }
